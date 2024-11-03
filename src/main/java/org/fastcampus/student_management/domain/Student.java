@@ -32,4 +32,5 @@ public class Student {
   public boolean isActivate() {
     return activated;
   }
+  public void changeActivate() { activated = !activated; }
 }

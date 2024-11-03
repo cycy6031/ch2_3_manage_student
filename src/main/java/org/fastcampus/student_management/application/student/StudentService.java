@@ -24,9 +24,21 @@ public class StudentService {
 
   public void activateStudent(String name) {
     // TODO: 과제 구현 부분
+    Student student = getStudent(name);
+    if(student.isActivate()){
+      System.out.println("해당 학생은 이미 활성화가 되어있습니다.");
+    }else {
+      student.changeActivate();
+    }
   }
 
   public void deactivateStudent(String name) {
     // TODO: 과제 구현 부분
+    Student student = getStudent(name);
+    if(!student.isActivate()){
+      System.out.println("해당 학생은 이미 비활성화가 되어있습니다.");
+    }else {
+      student.changeActivate();
+    }
   }
 }
