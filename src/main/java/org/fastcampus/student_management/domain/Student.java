@@ -33,4 +33,16 @@ public class Student {
     return activated;
   }
   public void changeActivate() { activated = !activated; }
+  public void activate(){
+    if(this.activated){
+      throw new IllegalArgumentException("이미 활성화가 되어있는 학생입니다.");
+    }
+    this.activated = true;
+  }
+  public void deactivate(){
+    if(!this.activated){
+      throw new IllegalArgumentException("이미 비활성화가 되어있는 학생입니다.");
+    }
+    this.activated = false;
+  }
 }
